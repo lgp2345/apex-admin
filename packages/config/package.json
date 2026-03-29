@@ -1,0 +1,34 @@
+{
+  "name": "@repo/config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    "./typescript/base": "./src/typescript/base.json",
+    "./typescript/nestjs": "./src/typescript/nestjs.json",
+    "./typescript/packages": "./src/typescript/packages.json",
+    "./request": {
+      "types": "./src/request/index.ts",
+      "default": "./src/request/index.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "request": [
+        "./src/request/index.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "lint": "biome check ."
+  }
+}
