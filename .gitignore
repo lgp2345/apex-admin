@@ -27,3 +27,4 @@ apps/*/build
 
 
 .github
+.pnpm-store
