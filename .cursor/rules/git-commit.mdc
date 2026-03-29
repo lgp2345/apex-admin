@@ -1,0 +1,11 @@
+---
+globs: []
+alwaysApply: true
+---
+
+# Git 提交说明（本仓库）
+
+- 生成、补全或改写 **git commit message** 时：**主题与正文使用中文**。
+- 仍须符合 [Conventional Commits](https://www.conventionalcommits.org/)：**`type` 使用英文小写**（如 `feat`、`fix`、`docs`、`chore`、`refactor`、`style`、`test`、`perf`、`ci`、`build`），格式为：`type: 中文简述`；需要 scope 时用 `type(scope): 中文简述`。
+- 多行时：第一行为标题，空一行后写正文（中文）。
+- 不要整段英文提交说明（除非用户明确要求英文）。
