@@ -1,0 +1,29 @@
+node_modules
+dist
+build
+coverage
+.turbo
+.DS_Store
+.shared
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Editor
+.vscode
+.idea
+
+# App build outputs
+apps/*/dist
+apps/*/build
+
+
+.github
