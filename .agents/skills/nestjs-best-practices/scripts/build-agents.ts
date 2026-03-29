@@ -45,18 +45,18 @@ const CATEGORIES = [
 ];
 
 interface RuleFrontmatter {
-  title: string;
   impact: string;
   impactDescription: string;
   tags: string[];
+  title: string;
 }
 
 interface Rule {
-  filename: string;
-  frontmatter: RuleFrontmatter;
-  content: string;
   category: string;
   categorySection: number;
+  content: string;
+  filename: string;
+  frontmatter: RuleFrontmatter;
 }
 
 function parseFrontmatter(content: string): {
@@ -172,7 +172,9 @@ function generateTableOfContents(rulesByCategory: Map<string, Rule[]>): string {
 
   for (const cat of CATEGORIES) {
     const rules = rulesByCategory.get(cat.name);
-    if (!rules || rules.length === 0) continue;
+    if (!rules || rules.length === 0) {
+      continue;
+    }
 
     // Section anchor format: #1-architecture
     const sectionAnchor = `${cat.section}-${cat.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
@@ -236,7 +238,9 @@ ${metadata.abstract}
   // Add rules by category
   for (const cat of CATEGORIES) {
     const categoryRules = rulesByCategory.get(cat.name);
-    if (!categoryRules || categoryRules.length === 0) continue;
+    if (!categoryRules || categoryRules.length === 0) {
+      continue;
+    }
 
     doc += `## ${cat.section}. ${cat.name}\n\n`;
     doc += `**Section Impact: ${cat.impact}**\n\n`;

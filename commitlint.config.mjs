@@ -1,7 +1,5 @@
-import { defineConfig } from "@commitlint/types";
-
-export default defineConfig({
-  eextends: ["@commitlint/config-conventional"],
+export default {
+  extends: ["@commitlint/config-conventional"],
   rules: {
     "header-max-length": [2, "always", 72],
     "subject-case": [
@@ -10,4 +8,4 @@ export default defineConfig({
       ["sentence-case", "start-case", "pascal-case", "upper-case"],
     ],
   },
-});
+};
