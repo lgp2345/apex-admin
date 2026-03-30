@@ -20,7 +20,6 @@ alwaysApply: true
 - **db-drizzle.mdc**: Drizzle schema/query 约束（db）
 - **ultracite.mdc**: Biome/Ultracite 风格与质量约束
 - 始终使用中文进行沟通和生成内容
-- Commit message 使用中文
 - 代码注释使用中文
 
 
